@@ -14,7 +14,7 @@ npx cap sync
 <docgen-index>
 
 * [`open()`](#open)
-* [`getStatus()`](#getstatus)
+* [`isOpen()`](#isopen)
 
 </docgen-index>
 
@@ -34,10 +34,10 @@ Open the cash drawer
 --------------------
 
 
-### getStatus()
+### isOpen()
 
 ```typescript
-getStatus() => Promise<{ isOpen: boolean; }>
+isOpen() => Promise<{ isOpen: boolean; }>
 ```
 
 Get cash drawer status
