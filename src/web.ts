@@ -8,7 +8,7 @@ export class CashDrawerWeb extends WebPlugin implements CashDrawerPlugin {
     return { success: false };
   }
 
-  async getStatus(): Promise<{ isOpen: boolean }> {
+  async isOpen(): Promise<{ isOpen: boolean }> {
     console.warn('Cash drawer not available on web');
     return { isOpen: false };
   }

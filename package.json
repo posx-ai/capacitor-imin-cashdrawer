@@ -1,6 +1,6 @@
 {
   "name": "@posx/imin-cashdrawer",
-  "version": "0.0.1",
+  "version": "5.0.0",
   "description": "Cashdrawer plugin for imin android POS",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
@@ -15,7 +15,7 @@
     "Package.swift",
     "PosxIminCashdrawer.podspec"
   ],
-  "author": "Steven Li",
+  "author": "posx team",
   "license": "MIT",
   "repository": {
     "type": "git",

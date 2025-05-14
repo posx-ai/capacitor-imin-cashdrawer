@@ -9,5 +9,5 @@ export interface CashDrawerPlugin {
    * Get cash drawer status
    * @returns Promise resolving to an object with isOpen property
    */
-  getStatus(): Promise<{ isOpen: boolean }>;
+  isOpen(): Promise<{ isOpen: boolean }>;
 }
