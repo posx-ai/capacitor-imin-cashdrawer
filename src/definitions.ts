@@ -1,3 +1,3 @@
-export interface cashdrawerPlugin {
+export interface CashDrawerPlugin {
   echo(options: { value: string }): Promise<{ value: string }>;
 }

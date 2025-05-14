@@ -1,9 +1,9 @@
 import { registerPlugin } from '@capacitor/core';
 
-import type { cashdrawerPlugin } from './definitions';
+import type { CashDrawerPlugin } from './definitions';
 
-const cashdrawer = registerPlugin<cashdrawerPlugin>('cashdrawer', {
-  web: () => import('./web').then((m) => new m.cashdrawerWeb()),
+const cashdrawer = registerPlugin<CashDrawerPlugin>('cashdrawer', {
+  web: () => import('./web').then((m) => new m.CashDrawerWeb()),
 });
 
 export * from './definitions';
