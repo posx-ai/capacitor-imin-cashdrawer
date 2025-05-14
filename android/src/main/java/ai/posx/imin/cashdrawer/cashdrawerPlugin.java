@@ -6,17 +6,34 @@ import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
 import com.getcapacitor.annotation.CapacitorPlugin;
 
-@CapacitorPlugin(name = "cashdrawer")
+@CapacitorPlugin(name = "CashDrawer")
 public class cashdrawerPlugin extends Plugin {
 
     private cashdrawer implementation = new cashdrawer();
 
     @PluginMethod
-    public void echo(PluginCall call) {
-        String value = call.getString("value");
+    public void open(PluginCall call) {
+        try {
+            boolean success = implementation.open(getContext());
+            
+            JSObject ret = new JSObject();
+            ret.put("success", success);
+            call.resolve(ret);
+        } catch (Exception e) {
+            call.reject("Failed to open cash drawer", e);
+        }
+    }
 
-        JSObject ret = new JSObject();
-        ret.put("value", implementation.echo(value));
-        call.resolve(ret);
+    @PluginMethod
+    public void getStatus(PluginCall call) {
+        try {
+            boolean isOpen = implementation.getStatus(getContext());
+            
+            JSObject ret = new JSObject();
+            ret.put("isOpen", isOpen);
+            call.resolve(ret);
+        } catch (Exception e) {
+            call.reject("Failed to get cash drawer status", e);
+        }
     }
 }

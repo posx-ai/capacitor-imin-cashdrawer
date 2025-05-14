@@ -3,8 +3,13 @@ import { WebPlugin } from '@capacitor/core';
 import type { CashDrawerPlugin } from './definitions';
 
 export class CashDrawerWeb extends WebPlugin implements CashDrawerPlugin {
-  async echo(options: { value: string }): Promise<{ value: string }> {
-    console.log('ECHO', options);
-    return options;
+  async open(): Promise<{ success: boolean }> {
+    console.warn('Cash drawer not available on web');
+    return { success: false };
+  }
+
+  async getStatus(): Promise<{ isOpen: boolean }> {
+    console.warn('Cash drawer not available on web');
+    return { isOpen: false };
   }
 }

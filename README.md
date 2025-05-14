@@ -13,24 +13,36 @@ npx cap sync
 
 <docgen-index>
 
-* [`echo(...)`](#echo)
+* [`open()`](#open)
+* [`getStatus()`](#getstatus)
 
 </docgen-index>
 
 <docgen-api>
 <!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
 
-### echo(...)
+### open()
 
 ```typescript
-echo(options: { value: string; }) => Promise<{ value: string; }>
+open() => Promise<{ success: boolean; }>
 ```
 
-| Param         | Type                            |
-| ------------- | ------------------------------- |
-| **`options`** | <code>{ value: string; }</code> |
+Open the cash drawer
 
-**Returns:** <code>Promise&lt;{ value: string; }&gt;</code>
+**Returns:** <code>Promise&lt;{ success: boolean; }&gt;</code>
+
+--------------------
+
+
+### getStatus()
+
+```typescript
+getStatus() => Promise<{ isOpen: boolean; }>
+```
+
+Get cash drawer status
+
+**Returns:** <code>Promise&lt;{ isOpen: boolean; }&gt;</code>
 
 --------------------
 
